@@ -35,7 +35,7 @@ def convert(filename):
 
     out = list(d.items())
     out = list(map(lambda x: [x[0]] + [list(y) for y in zip(*x[1])], out))
-    out = list(map(lambda x: (x[0], np.mean(x[2]), np.std(x[2])), out))
+    # out = list(map(lambda x: (x[0], np.mean(x[2]), np.std(x[2])), out))
 
     f.close()
     return out
