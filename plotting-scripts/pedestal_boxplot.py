@@ -20,10 +20,14 @@ def boxplot(fileList):
 
     fig = plt.figure(figsize=[12.8, 9.6])
     bp = plt.boxplot(series, labels = xAxis)
+    plt.xlabel('runs')
+    plt.ylabel('mean ADC')
     plt.savefig('plots/boxplot_Fliers.png', transparent=True)
 
     fig = plt.figure(figsize=[12.8, 9.6])
     bp = plt.boxplot(series, labels = xAxis, showfliers=False)
+    plt.xlabel('runs')
+    plt.ylabel('mean ADC')
     plt.savefig('plots/boxplot_noFliers.png', transparent=True)
 
 if __name__ == '__main__':
